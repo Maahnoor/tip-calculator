@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; color: gray;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.svg">
+  </header>
+
+    <main>
+      <div id="container__input__bill">
+        <p class="textpara">Bill</p>
+        <div id="small__container__bill">
+          <input id="input__bill" type="Number" name="bill" placeholder="0">
+          <img id="dollar__img" src="images/icon-dollar.svg" alt="dollar">
+        </div>
+      </div>
+      <div id="container__tip__buttons">
+        <p class="textpara">Select Tip %</p>
+        <div id="select__tip">
+          <button class="btn__select" value="5">5%</button>
+          <button class="btn__select" value="10">10%</button>
+          <button class="btn__select active" value="15">15%</button>
+          <button class="btn__select" value="25">25%</button>
+          <button class="btn__select" value="50">50%</button>
+          <input class="btn__select" id="btn__custom" type="Number" name="customTip" placeholder="Custom">
+        </div>
+      </div>
+
+      <div id="container__input_people">
+        <div id="small__container__people1">
+            <p class="textpara">Number of People</p>
+            <p id="error-msg">Can't be zero</p>
+        </div>
+        <div id="small__container__people">
+          <input id="input__people" type="Number" name="people" placeholder="0">
+          <img id="person__img" src="images/icon-person.svg" alt="person">
+        </div>
+      </div>
+
+      <div id="container__result">
+        <div>
+        <div id="container__tip__result">
+            <div id="tip__result__item1">
+              <p class="textpara">Tip Amount</p>
+              <p class="small__text">/ person</p>
+          </div>
+
+          <div id="tip__result__item2">
+            <img class="dollar__result" src="images/icon-dollar.svg" alt="dollar">
+            <span id="tip__per__person">0.00</span>
+          </div>
+        </div>
+
+        <div id="container__bill__result">
+          <div id="bill__result__item1">
+            <p class="textpara">Total</p>
+            <p class="small__text">/ person</p>
+          </div>
+
+          <div id="bill__result__item2">
+            <!-- <div class="dollar__result"></div> -->
+            <img class="dollar__result" src="images/icon-dollar.svg" alt="dollar">
+            <span id="bill__per__person">0.00</span>
+          </div>
+        </div>
+      </div>
+
+          <button id="btn__reset" onclick="restart()">Reset</button>
+      </div>
+    </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Maahnoor">Maah Noor</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
